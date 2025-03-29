@@ -1,0 +1,309 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Visual Studio 2022 projects\\LibWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\views\\books\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\views\\books\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\views\\books\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\views\\books\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\views\\books\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\views\\books\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\views\\books\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\views\\books\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\models\\bookgenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\models\\bookgenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\models\\borrowdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\models\\borrowdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\models\\borrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\models\\borrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|d:\\visual studio 2022 projects\\libweb\\libweb\\libweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{19B4031E-B9B4-4BEE-87D3-90CD37241580}|LibWeb\\LibWeb.csproj|solutionrelative:libweb\\libweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "LibWeb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "LibWeb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T09:02:05.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Books\\Edit.cshtml",
+              "RelativeDocumentMoniker": "LibWeb\\Views\\Books\\Edit.cshtml",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Books\\Edit.cshtml",
+              "RelativeToolTip": "LibWeb\\Views\\Books\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T07:41:59.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Books\\Delete.cshtml",
+              "RelativeDocumentMoniker": "LibWeb\\Views\\Books\\Delete.cshtml",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Books\\Delete.cshtml",
+              "RelativeToolTip": "LibWeb\\Views\\Books\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T07:41:20.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Books\\Create.cshtml",
+              "RelativeDocumentMoniker": "LibWeb\\Views\\Books\\Create.cshtml",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Books\\Create.cshtml",
+              "RelativeToolTip": "LibWeb\\Views\\Books\\Create.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T07:40:50.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Books\\Details.cshtml",
+              "RelativeDocumentMoniker": "LibWeb\\Views\\Books\\Details.cshtml",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Books\\Details.cshtml",
+              "RelativeToolTip": "LibWeb\\Views\\Books\\Details.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T12:15:25.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "LibWeb\\Controllers\\BookController.cs",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Controllers\\BookController.cs",
+              "RelativeToolTip": "LibWeb\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAcwMcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T10:43:17.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BookGenre.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\BookGenre.cs",
+              "RelativeDocumentMoniker": "LibWeb\\Models\\BookGenre.cs",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\BookGenre.cs",
+              "RelativeToolTip": "LibWeb\\Models\\BookGenre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:03:26.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "LibWeb\\Models\\AppDbContext.cs",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "LibWeb\\Models\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T11:58:17.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Program.cs",
+              "RelativeDocumentMoniker": "LibWeb\\Program.cs",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Program.cs",
+              "RelativeToolTip": "LibWeb\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T11:42:17.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Books\\Index.cshtml",
+              "RelativeDocumentMoniker": "LibWeb\\Views\\Books\\Index.cshtml",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Views\\Books\\Index.cshtml",
+              "RelativeToolTip": "LibWeb\\Views\\Books\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAqwB8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T11:41:42.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "LibWeb\\appsettings.json",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\appsettings.json",
+              "RelativeToolTip": "LibWeb\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-09T10:35:19.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BorrowDetail.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\BorrowDetail.cs",
+              "RelativeDocumentMoniker": "LibWeb\\Models\\BorrowDetail.cs",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\BorrowDetail.cs",
+              "RelativeToolTip": "LibWeb\\Models\\BorrowDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T10:34:57.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Borrow.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\Borrow.cs",
+              "RelativeDocumentMoniker": "LibWeb\\Models\\Borrow.cs",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\Borrow.cs",
+              "RelativeToolTip": "LibWeb\\Models\\Borrow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T10:34:37.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Rating.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\Rating.cs",
+              "RelativeDocumentMoniker": "LibWeb\\Models\\Rating.cs",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\Rating.cs",
+              "RelativeToolTip": "LibWeb\\Models\\Rating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T10:34:26.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "LibWeb\\Models\\Book.cs",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\Book.cs",
+              "RelativeToolTip": "LibWeb\\Models\\Book.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T10:34:12.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\Genre.cs",
+              "RelativeDocumentMoniker": "LibWeb\\Models\\Genre.cs",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\Genre.cs",
+              "RelativeToolTip": "LibWeb\\Models\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T10:34:03.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\User.cs",
+              "RelativeDocumentMoniker": "LibWeb\\Models\\User.cs",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\Models\\User.cs",
+              "RelativeToolTip": "LibWeb\\Models\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T07:39:53.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LibWeb.csproj",
+              "DocumentMoniker": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\LibWeb.csproj",
+              "RelativeDocumentMoniker": "LibWeb\\LibWeb.csproj",
+              "ToolTip": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\LibWeb.csproj",
+              "RelativeToolTip": "LibWeb\\LibWeb.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-09T07:39:52.206Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

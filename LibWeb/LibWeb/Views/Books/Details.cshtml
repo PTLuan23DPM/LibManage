@@ -1,0 +1,32 @@
+﻿@model LibWeb.Models.Book
+
+<h2>@Model.Title</h2>
+
+<div>
+    <img src="~/images/@Model.ImgFile" alt="Book Cover" style="width: 200px; height: auto;" />
+</div>
+
+<ul>
+    <li><strong>Author:</strong> @Model.Author</li>
+    <li><strong>Genres:</strong> @string.Join(", ", Model.BookGenres.Select(bg => bg.Genre.Name))</li>
+    <li><strong>Available Quantity:</strong> @Model.AvailableQuantity</li>
+    <li><strong>Average Rating:</strong> @Model.AverageRating</li>
+</ul>
+
+@if (Model.AvailableQuantity > 0)
+{
+    <form method="post" asp-action="Buy" asp-route-id="@Model.BookID">
+        <button type="submit" class="btn btn-primary">Buy</button>
+    </form>
+}
+else
+{
+    <p style="color: red;">This book is out of stock!</p>
+}
+
+<a href="@Url.Action("Index", "Books")">Back to List</a>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
