@@ -1,0 +1,70 @@
+﻿@model LibWeb.Models.Book
+
+@{
+    ViewData["Title"] = "Edit Book";
+}
+
+<h1>@ViewData["Title"]</h1>
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="BookID">BookID</label>
+        <input type="text" id="BookID" name="BookID" class="form-control" value="@Model.BookID" required />
+    </div>
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" id="Title" name="Title" class="form-control" value="@Model.Title" required />
+    </div>
+    <div class="form-group">
+        <label for="Author">Author</label>
+        <input type="text" id="Author" name="Author" class="form-control" value="@Model.Author" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="ImgFile" class="control-label">Current Image</label>
+        @if (Model.ImgFile != null)
+        {
+            <div>
+                <img src="~/Images/@Url.Content(Model.ImgFile)" alt="Current Image" width="50" height="50" />
+            </div>
+        }
+    </div>
+    <div class="form-group">
+        <label asp-for="ImgFile" class="control-label">Upload New Image</label>
+        <input asp-for="ImgFile" type="file" class="form-control" />
+        <span asp-validation-for="ImgFile" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="AvailableQuantity">Available Quantity</label>
+        <input type="number" id="AvailableQuantity" name="AvailableQuantity" class="form-control" value="@Model.AvailableQuantity" required />
+    </div>
+
+    <div class="form-group">
+        <label for="AverageRating">Average Rating</label>
+        <input type="number" id="AverageRating" name="AverageRating" class="form-control" step="0.01" value="@Model.AverageRating" readonly />
+    </div>
+
+    <div class="form-group">
+        <label for="Genres">Genres</label>
+        <div id="genreContainer">
+            @foreach (var genre in ViewBag.Genres as SelectList)
+            {
+                <div>
+                    <input type="checkbox"
+                           name="SelectedGenreIDs"
+                           value="@genre.Value"
+                           id="genre_@genre.Value"
+                    @(ViewBag.SelectedGenres != null && ViewBag.SelectedGenres.Contains(genre.Value) ? "checked" : "") />
+                    <label for="genre_@genre.Value">@genre.Text</label>
+                </div>
+            }
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Update Book</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

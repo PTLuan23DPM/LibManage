@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Book>
+﻿@using LibWeb.Models
+@model IEnumerable<LibWeb.Models.Book>
 
 @{
     ViewData["Title"] = "Book List";
@@ -22,8 +23,13 @@
                 <td>@book.Author</td>
                 <td>@string.Join(", ", book.BookGenres.Select(bg => bg.Genre.Name))</td>
                 <td>@book.AvailableQuantity</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Books", new { id = book.BookID })" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="@Url.Action("Delete", "Books", new { id = book.BookID })" class="btn btn-danger btn-sm">Delete</a>
+                </td>
             </tr>
         }
     </tbody>
 </table>
+<a href="@Url.Action("Create", "Books")" class="btn btn-primary">Add New Book</a>
 

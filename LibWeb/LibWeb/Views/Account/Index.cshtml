@@ -1,0 +1,30 @@
+﻿@model IEnumerable<User>
+
+<h2>Quản lý Tài Khoản</h2>
+
+<a href="/Account/Create" class="btn btn-primary">Thêm tài khoản</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên đăng nhập</th>
+            <th>Vai trò</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserID</td>
+                <td>@user.Username</td>
+                <td>@user.Role</td>
+                <td>
+                    <a href="/Account/Edit/@user.UserID" class="btn btn-danger">Sua</a>
+                    <a href="/Account/Delete/@user.UserID" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

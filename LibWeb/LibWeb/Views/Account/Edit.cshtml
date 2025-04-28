@@ -1,0 +1,26 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Chỉnh sửa tài khoản";
+}
+
+<h2>Chỉnh sửa tài khoản</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" name="UserID" value="@Model.UserID" />
+
+    <div class="form-group">
+        <label for="Username">Tên đăng nhập:</label>
+        <input type="text" name="Username" class="form-control" value="@Model.Username" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Role">Vai trò:</label>
+        <select name="Role" class="form-control">
+            <option value="Admin" selected="@(Model.Role == "Admin")">Admin</option>
+            <option value="Thuthu" selected="@(Model.Role == "Thuthu")">Thủ thư</option>
+            <option value="Nguoidung" selected="@(Model.Role == "Nguoidung")">Người dùng</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Cập nhật</button>
+</form>

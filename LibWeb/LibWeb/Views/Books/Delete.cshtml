@@ -1,0 +1,14 @@
+﻿@model LibWeb.Models.Book
+
+@{
+    ViewData["Title"] = "Delete Book";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Are you sure you want to delete the book <strong>@Model.Title</strong>?</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("List", "Book")" class="btn btn-secondary">Cancel</a>
+</form>

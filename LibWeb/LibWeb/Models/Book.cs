@@ -11,8 +11,10 @@ namespace LibWeb.Models
         [MaxLength(20)]
         public string BookID { get; set; }
 
-        [MaxLength(20)]
-        public string ImgFile { get; set; }
+        [MaxLength(255)]
+        public string? ImgFile { get; set; }
+        [NotMapped]
+        public IFormFile? ImgPath { get; set; }
 
         [Required]
         [MaxLength(255)]
@@ -27,8 +29,10 @@ namespace LibWeb.Models
 
         public float AverageRating { get; set; } = 0;
 
-        public ICollection<Rating> Ratings { get; set; }
-        public ICollection<BorrowDetail> BorrowDetails { get; set; }
+        public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
+        public virtual ICollection<BorrowDetail> BorrowDetails { get; set; } = new List<BorrowDetail>();
         public List<BookGenre> BookGenres { get; set; } = new List<BookGenre>();
+        [NotMapped]
+        public List<string> SelectedGenreIDs { get; set; } = new List<string>();
     }
 }
