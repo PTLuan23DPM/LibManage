@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eCZMvqbGvEfh9j2di1HlZYbIP+/Z1N8yh+4P2Cybvrw=",
+  "Hash": "aEwwvFHLRCu7F3JHFw5MmHPYWbd5OXDYj7Jq1nTXRjA=",
   "Source": "LibWeb",
   "BasePath": "_content/LibWeb",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\wwwroot\\Img\\11cab411-9003-4788-9adf-154ce69f3964.jpg",
+      "SourceId": "LibWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\wwwroot\\",
+      "BasePath": "_content/LibWeb",
+      "RelativePath": "Img/11cab411-9003-4788-9adf-154ce69f3964#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mrpc478nwn",
+      "Integrity": "jrKJBKFYiELSmPT4WMHOvk5x8S1QMQhFuxMSGloIuO0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\11cab411-9003-4788-9adf-154ce69f3964.jpg"
     },
     {
       "Identity": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\wwwroot\\Img\\b0e3f708-2c8e-461e-8d89-ba4831f8e51b.jpg",
@@ -1502,6 +1523,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "Img/11cab411-9003-4788-9adf-154ce69f3964.jpg",
+      "AssetFile": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\wwwroot\\Img\\11cab411-9003-4788-9adf-154ce69f3964.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jrKJBKFYiELSmPT4WMHOvk5x8S1QMQhFuxMSGloIuO0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 08:31:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jrKJBKFYiELSmPT4WMHOvk5x8S1QMQhFuxMSGloIuO0="
+        }
+      ]
+    },
+    {
+      "Route": "Img/11cab411-9003-4788-9adf-154ce69f3964.mrpc478nwn.jpg",
+      "AssetFile": "D:\\Visual Studio 2022 projects\\LibWeb\\LibWeb\\wwwroot\\Img\\11cab411-9003-4788-9adf-154ce69f3964.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jrKJBKFYiELSmPT4WMHOvk5x8S1QMQhFuxMSGloIuO0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 08:31:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mrpc478nwn"
+        },
+        {
+          "Name": "label",
+          "Value": "Img/11cab411-9003-4788-9adf-154ce69f3964.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jrKJBKFYiELSmPT4WMHOvk5x8S1QMQhFuxMSGloIuO0="
         }
       ]
     },

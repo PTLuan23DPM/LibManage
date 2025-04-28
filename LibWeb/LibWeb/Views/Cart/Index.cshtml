@@ -1,0 +1,40 @@
+﻿@model List<CartItem>
+
+<h1>Your Cart</h1>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Book.Title</td>
+                <td>
+                    <form asp-action="RemoveFromCart" method="post">
+                        <input type="hidden" name="bookID" value="@item.Book.BookID" />
+                        <button type="submit" class="btn btn-danger">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<form asp-action="Checkout" method="post">
+    <button type="submit" class="btn btn-primary">Checkout</button>
+</form>
+
+<a href="@Url.Action("Index", "Books")" class="btn btn-secondary">Return</a>

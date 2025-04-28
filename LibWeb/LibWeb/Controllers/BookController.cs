@@ -11,17 +11,50 @@ using System.Collections.Generic;
 public class BooksController : Controller
 {
     private readonly AppDbContext _context;
-
+    private const int PageSize = 5;
     public BooksController(AppDbContext context)
     {
         _context = context;
     }
 
-    public async Task<IActionResult> Index()
+    [HttpGet]
+    public async Task<IActionResult> Index(string Title, string[] genre, int page = 1)
     {
-        var books = await _context.Books.Include(b => b.BookGenres).ThenInclude(bg => bg.Genre)
-                  .ToListAsync();
-        return View(books);
+        var genres = await _context.Books
+                                   .SelectMany(g => g.BookGenres)
+                                   .Select(gg => gg.Genre)
+                                   .Distinct()
+                                   .ToListAsync();
+
+        ViewBag.Genres = genres;
+
+        var books = _context.Books
+                    .Include(g => g.BookGenres)
+                    .ThenInclude(gg => gg.Genre)
+        .AsQueryable();
+
+        if (!string.IsNullOrEmpty(Title))
+        {
+            books = books.Where(g => EF.Functions.Like(g.Title, $"%{Title}%"));
+        }
+
+        if (genre != null && genre.Any())
+        {
+            books = books.Where(g => g.BookGenres.Any(gg => genre.Contains(gg.Genre.Name)));
+        }
+
+        var totalGames = await books.CountAsync();
+        var totalPages = (int)Math.Ceiling(totalGames / (double)PageSize);
+
+        var pagedGames = await books
+                            .Skip((page - 1) * PageSize)
+                            .Take(PageSize)
+                            .ToListAsync();
+
+        ViewBag.CurrentPage = page;
+        ViewBag.TotalPages = totalPages;
+
+        return View(pagedGames);
     }
 
     public async Task<IActionResult> Details(string id)

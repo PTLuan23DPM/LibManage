@@ -15,9 +15,12 @@
 
 @if (Model.AvailableQuantity > 0)
 {
-    <form method="post" asp-action="Buy" asp-route-id="@Model.BookID">
-        <button type="submit" class="btn btn-primary">Buy</button>
-    </form>
+    <td>
+        <form method="post" action="@Url.Action("AddToCart", "Cart")">
+            <input type="hidden" name="bookID" value="@Model.BookID" />
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+    </td>
 }
 else
 {

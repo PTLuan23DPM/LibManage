@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using LibWeb.Models
+@using Microsoft.AspNetCore.Http
+@{
+    var userId = Context.Session.GetString("UserID");
+    var username = Context.Session.GetString("Username");
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -26,6 +34,22 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+                </div>
+            </div>
+            <div class="container-fluid bg-dark text-white p-2">
+                <div class="row">
+                    <div class="col-8">
+                        @if (!string.IsNullOrEmpty(userId))
+                        {
+                            <span>Welcome, @username! </span>
+                            <a href="@Url.Action("Logout", "User")" class="text-white">Logout</a>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("Login", "User")" class="text-white">Login</a>
+                            <a href = "@Url.Action("Register", "Account")" class="text-white">Register</a>
+                        }
+                    </div>
                 </div>
             </div>
         </nav>
