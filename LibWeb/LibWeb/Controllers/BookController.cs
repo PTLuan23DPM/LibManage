@@ -20,41 +20,40 @@ public class BooksController : Controller
     [HttpGet]
     public async Task<IActionResult> Index(string Title, string[] genre, int page = 1)
     {
-        var genres = await _context.Books
-                                   .SelectMany(g => g.BookGenres)
-                                   .Select(gg => gg.Genre)
-                                   .Distinct()
+        var genres = await _context.Genres
                                    .ToListAsync();
-
         ViewBag.Genres = genres;
+        ViewBag.CurrentTitle = Title;
+        ViewBag.SelectedGenres = genre?.ToList();
 
         var books = _context.Books
-                    .Include(g => g.BookGenres)
-                    .ThenInclude(gg => gg.Genre)
-        .AsQueryable();
+                    .Include(b => b.BookGenres)
+                    .ThenInclude(bg => bg.Genre)
+                    .AsQueryable();
 
         if (!string.IsNullOrEmpty(Title))
         {
-            books = books.Where(g => EF.Functions.Like(g.Title, $"%{Title}%"));
+            string searchPattern = $"%{Title}%";
+            books = books.Where(b => EF.Functions.Like(b.Title, searchPattern) || EF.Functions.Like(b.Author, searchPattern));
         }
 
         if (genre != null && genre.Any())
         {
-            books = books.Where(g => g.BookGenres.Any(gg => genre.Contains(gg.Genre.Name)));
+            books = books.Where(b => b.BookGenres.Any(bg => genre.Any(g => g == bg.Genre.Name)));
         }
 
-        var totalGames = await books.CountAsync();
-        var totalPages = (int)Math.Ceiling(totalGames / (double)PageSize);
-
-        var pagedGames = await books
-                            .Skip((page - 1) * PageSize)
-                            .Take(PageSize)
+        int pageSize = 10;
+        var totalBooks = await books.CountAsync();
+        var totalPages = (int)Math.Ceiling(totalBooks / (double)pageSize);
+        var pagedBooks = await books
+                            .Skip((page - 1) * pageSize)
+                            .Take(pageSize)
                             .ToListAsync();
 
         ViewBag.CurrentPage = page;
         ViewBag.TotalPages = totalPages;
 
-        return View(pagedGames);
+        return View(pagedBooks);
     }
 
     public async Task<IActionResult> Details(string id)

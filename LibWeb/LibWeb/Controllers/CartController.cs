@@ -86,12 +86,13 @@ namespace LibWeb.Controllers
         public async Task<IActionResult> Checkout()
         {
             var userId = HttpContext.Session.GetString("UserID");
+            /*
             if (string.IsNullOrEmpty(userId))
             {
                 TempData["ErrorMessage"] = "User not found or not logged in.";
                 return RedirectToAction("Index", "Cart");
             }
-
+            */
             var cart = GetCart();
             if (cart.Count == 0)
             {
@@ -100,12 +101,13 @@ namespace LibWeb.Controllers
             }
 
             var user = await _context.Users.FindAsync(userId);
+            /*
             if (user == null)
             {
                 TempData["ErrorMessage"] = "User not found!";
                 return RedirectToAction("Index", "Cart");
             }
-
+            */
             var borrow = new Borrow
             {
                 BorrowID = GenerateBorrowID(),
