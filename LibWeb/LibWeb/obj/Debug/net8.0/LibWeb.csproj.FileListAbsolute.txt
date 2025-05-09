@@ -519,3 +519,5 @@ D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\refint\LibWeb.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.pdb
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.genruntimeconfig.cache
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\ref\LibWeb.dll
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\System.Net.Http.Json.dll

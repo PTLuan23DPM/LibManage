@@ -29,6 +29,7 @@ builder.Services.AddSession(options =>
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<AccountService>();
+builder.Services.AddHttpClient<ChatbotService>();
 
 var app = builder.Build();
 
