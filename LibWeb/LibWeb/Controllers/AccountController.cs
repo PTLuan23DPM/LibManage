@@ -4,17 +4,22 @@ using LibWeb.Services;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
 
 namespace LibWeb.Controllers
 {
     public class AccountController : Controller
     {
         private readonly AccountService _accountService;
-
+        private readonly AuthenticationService _authService;
         private readonly AppDbContext _context;
-        public AccountController(AccountService accountService)
+        public AccountController(AccountService accountService, AuthenticationService authService, AppDbContext context)
         {
             _accountService = accountService;
+            _authService = authService;
+            _context = context;
         }
         public async Task<IActionResult> Index()
         {
@@ -90,6 +95,47 @@ namespace LibWeb.Controllers
         {
             var result = await _accountService.DeleteUser(id);
             return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _authService.AuthenticateAsync(model.Username, model.PasswordHash); 
+
+                if (user != null)
+                {
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.NameIdentifier, user.UserID.ToString()),
+                        new Claim(ClaimTypes.Name, user.Username),
+                        new Claim(ClaimTypes.Role, user.Role)
+                    };
+
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+                    return RedirectToAction("Index", "Books"); 
+                }
+
+                ModelState.AddModelError(string.Empty, "Đăng nhập không thành công. Vui lòng kiểm tra tên đăng nhập và mật khẩu."); // Login failed message
+            }
+            return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Logout()
+        {
+            HttpContext.Items.Remove("UserID");
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Books");
         }
     }
 }

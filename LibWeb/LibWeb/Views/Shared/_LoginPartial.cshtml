@@ -1,0 +1,25 @@
+﻿@if (User.Identity.Name != null)
+{
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    @User.Identity.Name
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <form asp-controller="Account" asp-action="Logout" method="post">
+                            <button type="submit" class="dropdown-item">Log Out</button>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+}
+else
+{
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="create">Register</a></li>
+            <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Login">Log In</a></li>
+        </ul>
+}

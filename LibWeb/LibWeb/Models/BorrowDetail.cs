@@ -11,12 +11,10 @@ public class BorrowDetail
 
     [Required]
     public string BorrowID { get; set; }
-    [ForeignKey("BorrowID")]
     public Borrow Borrow { get; set; }
 
     [Required]
     public string BookID { get; set; }
-    [ForeignKey("BookID")]
     public Book Book { get; set; }
 
     public DateTime OrderDate { get; set; } = DateTime.Now;

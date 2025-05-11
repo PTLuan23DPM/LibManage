@@ -74,77 +74,87 @@ namespace LibWeb.Controllers
         {
             return View();
         }
-        public static string GenerateBorrowID()
+        public static string GenerateID()
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             var random = new Random();
             return new string(Enumerable.Repeat(chars, 20)
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
-
+        
         [HttpPost]
         public async Task<IActionResult> Checkout()
         {
-            var userId = HttpContext.Session.GetString("UserID");
-            /*
+            // 1. Get the User's ID:
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Use this!
             if (string.IsNullOrEmpty(userId))
             {
-                TempData["ErrorMessage"] = "User not found or not logged in.";
-                return RedirectToAction("Index", "Cart");
+                TempData["ErrorMessage"] = "Bạn cần đăng nhập để thực hiện thanh toán."; // You need to login to checkout.
+                return RedirectToAction("Login", "Account"); // Redirect to the login page
             }
-            */
+
+            // 2. Get the Cart:
             var cart = GetCart();
-            if (cart.Count == 0)
+            if (cart == null || cart.Count == 0) // Check for null cart
             {
-                TempData["ErrorMessage"] = "Your cart is empty!";
+                TempData["ErrorMessage"] = "Giỏ hàng của bạn đang trống!"; // Your cart is empty!
                 return RedirectToAction("Index", "Cart");
             }
 
-            var user = await _context.Users.FindAsync(userId);
-            /*
+            // 3. Get the User from the Database:
+            var user = await _context.Users.FindAsync(userId); // Find by ID
             if (user == null)
             {
-                TempData["ErrorMessage"] = "User not found!";
-                return RedirectToAction("Index", "Cart");
+                TempData["ErrorMessage"] = "Không tìm thấy người dùng!"; // User not found!
+                return RedirectToAction("Index", "Cart"); // Or handle this more gracefully
             }
-            */
+
+            // 4. Create the Borrow:
             var borrow = new Borrow
             {
-                BorrowID = GenerateBorrowID(),
-                UserID = userId
+                BorrowID = GenerateID(),
+                UserID = userId, // Use the user ID from the claim
+                User = user, // Set the User navigation property
             };
 
-            _context.Borrows.Add(borrow);
-            await _context.SaveChangesAsync();
+            _context.Borrow.Add(borrow);
 
+
+            // 5. Iterate through the cart and create BorrowDetails:
             foreach (var item in cart)
             {
-                var book = await _context.Books.FindAsync(item.Book.BookID);
-                if (book == null || book.AvailableQuantity < 1)
+                var book = await _context.Books.FindAsync(item.Book.BookID); // Find book
+
+                if (book == null || book.AvailableQuantity < 1) // Check quantity!
                 {
-                    TempData["ErrorMessage"] = $"Not enough stock for game: {book?.Title ?? "Unknown"}.";
+                    TempData["ErrorMessage"] = $"Không đủ số lượng cho sách: {book?.Title ?? "Unknown"}. Chỉ còn lại {book?.AvailableQuantity ?? 0} quyển"; // Not enough stock
                     return RedirectToAction("Index", "Cart");
                 }
 
                 var borrowDetail = new BorrowDetail
                 {
+                    BorrowDetailID = GenerateID(), // Generate unique ID for BorrowDetail
                     BorrowID = borrow.BorrowID,
                     BookID = item.Book.BookID,
                     OrderDate = DateTime.Now,
-                    DueDate = DateTime.Now.AddDays(7) // Set due date to 7 days from now
+                    DueDate = DateTime.Now.AddDays(7)
                 };
+                Console.WriteLine($"[DEBUG] Adding BorrowDetail: {borrowDetail.BorrowDetailID}, BookID: {borrowDetail.BookID}");
 
                 _context.BorrowDetails.Add(borrowDetail);
 
+                // Deduct the quantity before saving
                 book.AvailableQuantity -= 1;
             }
 
-
+            // 6. Save Changes:
             await _context.SaveChangesAsync();
 
+            // 7. Clear the Cart:
             SetCart(new List<CartItem>());
 
-            return RedirectToAction("OrderSuccess", "Cart", new { borrowID = borrow.BorrowID });
+            // 8. Redirect:
+            return RedirectToAction("OrderSuccess", "Cart");
         }
 
 
