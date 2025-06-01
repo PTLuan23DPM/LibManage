@@ -22,7 +22,7 @@ public class User
     [EnumDataType(typeof(UserRole))]
     public string Role { get; set; }
 
-    public ICollection<Rating>? Ratings { get; set; }
+    public ICollection<Ratings>? Ratings { get; set; }
     public ICollection<Borrow>? Borrows { get; set; }
 }
 public enum UserRole

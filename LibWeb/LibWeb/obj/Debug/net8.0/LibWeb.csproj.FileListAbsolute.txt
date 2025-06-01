@@ -346,14 +346,6 @@ C:\Users\Asus\Desktop\LibWeb\LibWeb\obj\Debug\net8.0\refint\LibWeb.dll
 C:\Users\Asus\Desktop\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.pdb
 C:\Users\Asus\Desktop\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.genruntimeconfig.cache
 C:\Users\Asus\Desktop\LibWeb\LibWeb\obj\Debug\net8.0\ref\LibWeb.dll
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.csproj.AssemblyReference.cache
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.GeneratedMSBuildEditorConfig.editorconfig
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.AssemblyInfoInputs.cache
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.AssemblyInfo.cs
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.csproj.CoreCompileInputs.cache
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.MvcApplicationPartsAssemblyInfo.cache
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.RazorAssemblyInfo.cache
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.RazorAssemblyInfo.cs
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\appsettings.Development.json
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\appsettings.json
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\LibWeb.staticwebassets.runtime.json
@@ -382,6 +374,7 @@ D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\Microsoft.EntityFr
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -416,6 +409,7 @@ D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\System.Formats.Asn
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\System.IO.Pipelines.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\System.Net.Http.Json.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\System.Runtime.Caching.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\System.Security.Permissions.dll
@@ -500,18 +494,21 @@ D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\runtimes\win\lib\n
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.csproj.AssemblyReference.cache
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.AssemblyInfoInputs.cache
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.AssemblyInfo.cs
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.MvcApplicationPartsAssemblyInfo.cache
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.RazorAssemblyInfo.cache
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.RazorAssemblyInfo.cs
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\scopedcss\bundle\LibWeb.styles.css
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\scopedcss\projectbundle\LibWeb.bundle.scp.css
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets.build.json
+D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets.development.json
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets\msbuild.LibWeb.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets\msbuild.LibWeb.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets\msbuild.build.LibWeb.props
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.LibWeb.props
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.LibWeb.props
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets.pack.json
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.csproj.Up2Date
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.dll
@@ -519,5 +516,3 @@ D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\refint\LibWeb.dll
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.pdb
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\LibWeb.genruntimeconfig.cache
 D:\Visual Studio 2022 projects\LibWeb\LibWeb\obj\Debug\net8.0\ref\LibWeb.dll
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
-D:\Visual Studio 2022 projects\LibWeb\LibWeb\bin\Debug\net8.0\System.Net.Http.Json.dll

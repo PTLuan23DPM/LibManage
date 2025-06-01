@@ -3,7 +3,7 @@
 <h2>@Model.Title</h2>
 
 <div>
-    <img src="~/images/@Model.ImgFile" alt="Book Cover" style="width: 200px; height: auto;" />
+    <img src="~/Img/@Model.ImgFile" alt="Book Cover" style="width: 200px; height: auto;" />
 </div>
 
 <ul>
@@ -12,6 +12,21 @@
     <li><strong>Available Quantity:</strong> @Model.AvailableQuantity</li>
     <li><strong>Average Rating:</strong> @Model.AverageRating</li>
 </ul>
+
+<h4>Rate this book</h4>
+    <form method="post" asp-controller="Rating" asp-action="Rate" id="ratingForm">
+        <input type="hidden" name="bookID" value="@Model.BookID" />
+        <input type="hidden" name="ratingValue" id="ratingValue" />
+
+        <div id="starRating" class="mb-2">
+            @for (int i = 1; i <= 10; i++)
+            {
+                <span class="star" data-value="@i">&#9733;</span> <!-- ★ -->
+            }
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit Rating</button>
+    </form>
 
 @if (Model.AvailableQuantity > 0)
 {
@@ -29,7 +44,50 @@ else
 
 <a href="@Url.Action("Index", "Books")">Back to List</a>
 
+
+
 @if (TempData["ErrorMessage"] != null)
 {
     <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
 }
+
+@section Styles {
+    <style>
+        .star {
+            font-size: 30px;
+            color: gray;
+            cursor: pointer;
+            user-select: none;
+        }
+
+            .star.selected {
+                color: gold;
+            }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('.star');
+            const ratingInput = document.getElementById('ratingValue');
+
+            stars.forEach(star => {
+                star.addEventListener('click', function () {
+                    const rating = parseInt(this.getAttribute('data-value'));
+                    ratingInput.value = rating;
+
+                    stars.forEach(s => {
+                        const val = parseInt(s.getAttribute('data-value'));
+                        if (val <= rating) {
+                            s.classList.add('selected');
+                        } else {
+                            s.classList.remove('selected');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+}
+

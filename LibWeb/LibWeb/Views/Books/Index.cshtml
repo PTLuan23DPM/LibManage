@@ -41,14 +41,20 @@
                 <td>@book.AvailableQuantity</td>
                 <td>@book.AverageRating</td>
                 <td>
-                    <a href="@Url.Action("Edit", "Books", new { id = book.BookID })" class="btn btn-warning btn-sm">Edit</a>
-                    <a href="@Url.Action("Delete", "Books", new { id = book.BookID })" class="btn btn-danger btn-sm">Delete</a>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Thuthu")) 
+                    {
+                        <a href="@Url.Action("Edit", "Books", new { id = book.BookID })" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="@Url.Action("Delete", "Books", new { id = book.BookID })" class="btn btn-danger btn-sm">Delete</a>
+                    }
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<a href="@Url.Action("Create", "Books")" class="btn btn-primary">Add New Book</a>
+@if (User.IsInRole("Admin") || User.IsInRole("Thuthu")) 
+{     
+    <a href="@Url.Action("Create", "Books")" class="btn btn-primary">Add New Book</a>
+}
 
 <div id="chatbot-window" class="chatbot-window">
     <div class="chatbot-header">

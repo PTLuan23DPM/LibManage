@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Borrow>
+
+<h3>Danh sách mượn của người dùng</h3>
+
+@if (!Model.Any())
+{
+    <p>Không có dữ liệu mượn cho người dùng này.</p>
+}
+else
+{
+    foreach (var borrow in Model)
+    {
+        <div class="card mb-3">
+            <div class="card-header">
+                <strong>Mã mượn:</strong> @borrow.BorrowID
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="mb-0">Chi tiết sách đã mượn</h5>
+                    <div>
+                        <input type="checkbox"
+                                               id="returned-@borrow.BorrowID"
+                                               class="returned-checkbox"
+                                               data-id="@borrow.BorrowID" />
+                        <label for="returned-@borrow.BorrowID">Returned</label>
+                    </div>
+                </div>
+
+                @if (borrow.BorrowDetails != null && borrow.BorrowDetails.Any())
+                {
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Mã sách</th>
+                                <th>Tên sách</th>
+                                <th>Ngày mượn</th>
+                                <th>Hạn trả</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var detail in borrow.BorrowDetails)
+                            {
+                                <tr>
+                                    <td>@detail.BookID</td>
+                                    <td>@detail.Book?.Title ?? "(Không có tiêu đề)"</td>
+                                    <td>@detail.OrderDate.ToShortDateString()</td>
+                                    <td>@(detail.DueDate?.ToShortDateString() ?? "Chưa có")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p>Không có chi tiết mượn.</p>
+                }
+            </div>
+        </div>
+    }
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".returned-checkbox").each(function () {
+            const borrowId = $(this).data("id");
+            const savedValue = localStorage.getItem("returned-" + borrowId);
+            if (savedValue === "true") {
+                $(this).prop("checked", true);
+            }
+        });
+
+        $(".returned-checkbox").change(function () {
+            const borrowId = $(this).data("id");
+            const isChecked = $(this).is(":checked");
+            localStorage.setItem("returned-" + borrowId, isChecked);
+        });
+    });
+</script>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using LibWeb.Models;
-public class Rating
+public class Ratings
 {
     [Key]
     [MaxLength(20)]
@@ -21,5 +21,5 @@ public class Rating
 
     [Required]
     [Range(1, 10)]
-    public int RatingValue { get; set; }
+    public int Rating { get; set; }
 }

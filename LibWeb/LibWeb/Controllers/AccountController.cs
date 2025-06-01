@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibWeb.Controllers
 {
@@ -38,6 +39,8 @@ namespace LibWeb.Controllers
             return new string(Enumerable.Repeat(chars, length).Select(s => s[new Random().Next(s.Length)]).ToArray());
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, Thuthu")]
         public async Task<IActionResult> Create(User user)
         {
             Console.WriteLine($"Received User: {user.Username}, {user.PasswordHash}, {user.Role}");
@@ -76,6 +79,8 @@ namespace LibWeb.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(User user)
         {
             if (!ModelState.IsValid)
@@ -91,10 +96,11 @@ namespace LibWeb.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(string id)
         {
             var result = await _accountService.DeleteUser(id);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Account");
         }
         [HttpGet]
         public IActionResult Login()
@@ -137,5 +143,17 @@ namespace LibWeb.Controllers
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Books");
         }
+        [HttpGet]
+        public IActionResult GetBorrowsByUserId(string userId)
+        {
+            var borrows = _context.Borrow
+              .Include(b => b.BorrowDetails)
+                .ThenInclude(d => d.Book)
+              .Where(b => b.UserID == userId)
+              .ToList();
+
+            return PartialView("_BorrowListPartial", borrows);
+        }
+
     }
 }

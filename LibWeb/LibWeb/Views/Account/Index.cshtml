@@ -16,15 +16,34 @@
     <tbody>
         @foreach (var user in Model)
         {
-            <tr>
+            <tr class="user-row" data-userid="@user.UserID" style="cursor:pointer;">
                 <td>@user.UserID</td>
                 <td>@user.Username</td>
                 <td>@user.Role</td>
                 <td>
-                    <a href="/Account/Edit/@user.UserID" class="btn btn-danger">Sua</a>
+                    <a href="/Account/Edit/@user.UserID" class="btn btn-warning">Sửa</a>
                     <a href="/Account/Delete/@user.UserID" class="btn btn-danger">Xóa</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<div id="borrow-details" class="mt-4">
+    
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".user-row").click(function () {
+                var userId = $(this).data("userid");
+
+                $.get("/Account/GetBorrowsByUserId", { userId: userId }, function (data) {
+                    $("#borrow-details").html(data);
+                });
+            });
+        });
+    </script>
+}

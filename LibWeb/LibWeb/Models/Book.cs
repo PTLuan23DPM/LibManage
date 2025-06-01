@@ -29,7 +29,7 @@ namespace LibWeb.Models
 
         public float AverageRating { get; set; } = 0;
 
-        public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
+        public virtual ICollection<Ratings> Ratings { get; set; } = new List<Ratings>();
         public virtual ICollection<BorrowDetail> BorrowDetails { get; set; } = new List<BorrowDetail>();
         public List<BookGenre> BookGenres { get; set; } = new List<BookGenre>();
         [NotMapped]

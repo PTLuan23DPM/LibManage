@@ -7,7 +7,7 @@ public class AppDbContext : DbContext
     public DbSet<Genre> Genres { get; set; }
     public DbSet<Book> Books { get; set; }
     public DbSet<BookGenre> BookGenres { get; set; }
-    public DbSet<Rating> Ratings { get; set; }
+    public DbSet<Ratings> Ratings { get; set; }
     public DbSet<Borrow> Borrow { get; set; }
     public DbSet<BorrowDetail> BorrowDetails { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -19,7 +19,7 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Genre>()
             .HasIndex(g => g.Name)
             .IsUnique();
-        modelBuilder.Entity<Rating>()
+        modelBuilder.Entity<Ratings>()
             .HasIndex(r => new { r.UserID, r.BookID })
             .IsUnique();
         modelBuilder.Entity<Book>()

@@ -37,14 +37,13 @@ namespace LibWeb.Controllers
                 {
                     // Book already in cart, deny adding more
                     TempData["ErrorMessage"] = $"You have already added {book.Title} to your cart.";
-                    return View("Index", cart);  // Return the same view with the current cart
+                    return View("Index", cart);  
                 }
 
-                // Update the cart in the session
                 SetCart(cart);
             }
 
-            return View("Index", GetCart());  // Return the current cart
+            return View("Index", GetCart()); 
         }
 
         [HttpPost]
@@ -85,47 +84,41 @@ namespace LibWeb.Controllers
         [HttpPost]
         public async Task<IActionResult> Checkout()
         {
-            // 1. Get the User's ID:
-            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Use this!
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier); 
             if (string.IsNullOrEmpty(userId))
             {
-                TempData["ErrorMessage"] = "Bạn cần đăng nhập để thực hiện thanh toán."; // You need to login to checkout.
-                return RedirectToAction("Login", "Account"); // Redirect to the login page
+                TempData["ErrorMessage"] = "Bạn cần đăng nhập để thực hiện thanh toán."; 
+                return RedirectToAction("Login", "Account"); 
             }
 
-            // 2. Get the Cart:
             var cart = GetCart();
-            if (cart == null || cart.Count == 0) // Check for null cart
+            if (cart == null || cart.Count == 0)
             {
-                TempData["ErrorMessage"] = "Giỏ hàng của bạn đang trống!"; // Your cart is empty!
+                TempData["ErrorMessage"] = "Giỏ hàng của bạn đang trống!"; 
                 return RedirectToAction("Index", "Cart");
             }
 
-            // 3. Get the User from the Database:
-            var user = await _context.Users.FindAsync(userId); // Find by ID
+            var user = await _context.Users.FindAsync(userId); 
             if (user == null)
             {
-                TempData["ErrorMessage"] = "Không tìm thấy người dùng!"; // User not found!
-                return RedirectToAction("Index", "Cart"); // Or handle this more gracefully
+                TempData["ErrorMessage"] = "Không tìm thấy người dùng!"; 
+                return RedirectToAction("Index", "Cart"); 
             }
 
-            // 4. Create the Borrow:
             var borrow = new Borrow
             {
                 BorrowID = GenerateID(),
-                UserID = userId, // Use the user ID from the claim
-                User = user, // Set the User navigation property
+                UserID = userId, 
+                User = user, 
             };
 
             _context.Borrow.Add(borrow);
 
-
-            // 5. Iterate through the cart and create BorrowDetails:
             foreach (var item in cart)
             {
-                var book = await _context.Books.FindAsync(item.Book.BookID); // Find book
+                var book = await _context.Books.FindAsync(item.Book.BookID); 
 
-                if (book == null || book.AvailableQuantity < 1) // Check quantity!
+                if (book == null || book.AvailableQuantity < 1) 
                 {
                     TempData["ErrorMessage"] = $"Không đủ số lượng cho sách: {book?.Title ?? "Unknown"}. Chỉ còn lại {book?.AvailableQuantity ?? 0} quyển"; // Not enough stock
                     return RedirectToAction("Index", "Cart");
@@ -147,13 +140,10 @@ namespace LibWeb.Controllers
                 book.AvailableQuantity -= 1;
             }
 
-            // 6. Save Changes:
             await _context.SaveChangesAsync();
 
-            // 7. Clear the Cart:
             SetCart(new List<CartItem>());
 
-            // 8. Redirect:
             return RedirectToAction("OrderSuccess", "Cart");
         }
 

@@ -41,7 +41,7 @@ public class ChatbotService
                 prompt += "Data:\n";
                 foreach (var row in rows)
                 {
-                    prompt += JsonSerializer.Serialize(row) + "\n"; // Serialize each row as JSON
+                    prompt += JsonSerializer.Serialize(row) + "\n"; 
                 }
             }
             else
